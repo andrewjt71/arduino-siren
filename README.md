@@ -13,7 +13,7 @@ My requirements are as follows:
 In order to build the circuit which will meet my requirements I need several components:
 
 ### PWM
-I will need a [Pulse Width Modulator](https://www.arduino.cc/en/Tutorial/PWM)</a>. This will enable me to drive the analog motor in the siren with digital signals.
+I will need a [Pulse Width Modulator](https://www.arduino.cc/en/Tutorial/PWM)</a>. This will enable me to drive the analog motor in the siren with digital signals. I will combine this with a potentiometer, to allow me to control the siren volume.
 
 ![pwm](./img/pwm.jpg)
 
@@ -41,13 +41,15 @@ I will use a transformer from a mains socket to power the entire circuit.
 ![transformer](./img/transformer.jpg)
 
 ## The Circuit
-After a lot of thought, I developed the following circuit using the various components described above.
+After a lot of thought, I developed the following circuit using the various components described above:
 
-![siren circuit](./img/siren-circuit.png)
+![siren circuit](./img/siren-circuit-diagram.png)
 
-When wired up, in real life the circuit looks like this
+*(drawn with [excalidraw](https://excalidraw.com/))*
 
-The transformer produces power to the Wemos via the UBEC. The UBEC ensures no more than 5/6v is supplied to the Wemos to avoid damaging it. The transformer also provides power to the PWM (which is used to control the siren) and The Wemos provides 3V to the relay. The circuit which provides power to the PWM is broken by a relay, which means that by default it will not make any noise. In addition to the circuitry shown in the above diagram, there are additional wires between the Wemos and the relay, through which the Wemos sends data. This allows the Wemos to tell the relay to close the circuit when appropriate, which in turn will sound the siren.
+Special thanks to my good friend and colleague [Alex Farr](https://github.com/orgs/boxuk/people/alexfarrbox) for his help in working this out!
+
+The transformer produces power to the Wemos via the UBEC. The UBEC ensures no more than 5/6v is supplied to the Wemos to avoid damaging it. The transformer also provides power to the PWM (which is used to control the siren) and the Wemos provides 3V to the relay. The circuit which provides power to the PWM is broken by a relay, which means that by default it will not make any noise. The wire between the Wemos and relay allows the Wemos to control the relay, opening and closing the circuit where appropriate. The result is that when the Wemos sends a signal to the relay, the circuit containing the siren is closed, sounding the alarm.
 
 The actual circuit looks like this:
 ![siren circuit real](./img/siren-circuit-real.jpg)
