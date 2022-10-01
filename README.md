@@ -1,6 +1,8 @@
 # Siren Hardware Hacking (IoT)
 
-Aim - To use an ESP8266 chip to control an air raid siren, switching it if the surf conditions in my area match a given criteria.
+Using an ESP8266 chip to control an air raid siren, switching it if the surf conditions in my area match a given criteria.
+
+![siren](./img/siren.jpg)
 
 ## Requirements</h2>
 My requirements are as follows:
