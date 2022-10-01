@@ -10,6 +10,7 @@ My requirements are as follows:
 - Air raid siren must be controllable by an ESP8266 chip
 - The entire circuit must be powered from a single plug socket
 - The ESP8266 must connect to WiFi, find a surf forecast and sound the siren if the conditions are good
+- Volume of the siren must be configurable
 
 ## Components
 In order to build the circuit which will meet my requirements I need several components:
